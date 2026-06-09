@@ -4,7 +4,7 @@
 The model utilizes a **Mask R-CNN (ResNet-50-FPN)** architecture to segment "TeaBox" instances. The pipeline is designed to generate pixel-perfect masks, enabling the extraction of physical dimensions from images.
 
 ## 2. Configuration
-* **Dataset:** 54 training / 15 validation images.
+* **Dataset:** 64 training / 15 validation images.
 * **Training Duration:** 30 Epochs.
 * **Batch Size:** 2.
 * **Learning Rate:** 0.001 (stepped at 7-epoch intervals).
