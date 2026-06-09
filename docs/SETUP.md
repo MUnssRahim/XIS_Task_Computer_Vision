@@ -1,4 +1,3 @@
-cat << 'EOF' > docs/SETUP.md
 # Environment Setup & Execution Guide
 
 This document outlines the complete, end-to-end procedure required to replicate our metrology environment, train the Mask R-CNN model on the cloud, and execute the final inference pipeline to extract real-world millimeter measurements.
