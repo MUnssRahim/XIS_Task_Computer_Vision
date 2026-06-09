@@ -3,11 +3,13 @@
 ## 1. Intrinsic Calibration Metrics
 The camera's internal geometry and lens curvature were mathematically modeled using a 13x9 OpenCV checkerboard calibration process. The following optical constants were extracted to flatten the workspace prior to dimensional measurement:
 
-**Camera Matrix ($K$)**
-This 3x3 matrix maps the focal length and the true optical center of the camera sensor:
-$$
-K = \begin{bmatrix} 6286.27 & 0 & 1049.03 \\ 0 & 5957.50 & 2697.57 \\ 0 & 0 & 1.00 \end{bmatrix}
-$$
+
+**Camera Matrix (K)**
+Maps the focal length and the true optical center of the camera sensor:
+```text
+[ 6286.27       0.00    1049.03 ]
+[    0.00    5957.50    2697.57 ]
+[    0.00       0.00       1.00 ]
 
 **Distortion Coefficients ($D$)**
 This 5-parameter array maps the radial and tangential lens warping (barrel/pincushion distortion) to allow for mathematical flattening:
