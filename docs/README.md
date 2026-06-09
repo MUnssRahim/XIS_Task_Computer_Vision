@@ -8,24 +8,25 @@
 ## 📌 Project Overview
 This repository implements an end-to-end computer vision pipeline for instance segmentation and metrology of a target object (the **TeaBox**). By combining camera intrinsic calibration, a Mask R-CNN deep learning model, and dynamic scale extraction, the system computes the real-world dimensions of objects directly from 2D photographs.
 
-### 🔗 Dataset & Model Weights
-Due to file size constraints, the curated image datasets, polygon annotations, and trained model weights (`.pth` files) are hosted externally. 
+### 🔗 Datasets , Outputs & Model Weights
+Due to file size constraints, the curated image datasets, checkboard images , Final Output **Masked Images**, and trained model weights (`.pth` files) are hosted externally. 
 **👉 [Access the Dataset & Models on Google Drive](https://drive.google.com/drive/folders/13S8qHCFh5ukO5oA7mtoIIR17ovi-gmZA?usp=drive_link)**
 
 ---
 
 ## 🏗️ Repository Structure & Documentation
-To maintain a clean working directory, all detailed technical reports and error analyses have been centralized in the `docs/` folder.
+To maintain a clean working directory, all detailed technical reports, limitations, and error analyses have been centralized in the `docs/` folder.
 
 ```text
 ├── docs/                              # 📚 Centralized Documentation
-│   ├── DataSet.md                     # Dataset selection, anchor strategy, and annotations
-│   ├── Calibration.md                 # Intrinsic K & D matrices, checkerboard RMS error
-│   ├── Training.md                    # Mask R-CNN config, hyperparams, and loss graphs
-│   └── Metrics.md                     # Metrology error analysis and performance evaluation
-├── calibration/                       # Camera calibration notebook 
-├── Training/                          # Model training notebook
-├── inference/                         # Inference and segmentation notebook
-├── measurement/                       # Measurement and metrology evaluation report
+│   ├── CALIBRATION_REPORT.md          # Intrinsic K & D matrices, checkerboard RMS error & hardware limitations
+│   ├── DATASET_CARD.md                # Dataset selection, SadaPay anchor strategy, and polygon annotations
+│   ├── MEASUREMENT_REPORT.md          # Metrology error analysis, Z-axis parallax evaluation, and final metrics
+│   ├── SETUP.md                       # Environment setup and end-to-end execution instructions
+│   └── TRAINING_REPORT.md             # Mask R-CNN config, hyperparameters, and model convergence limits
+├── Training/                          # Model training scripts, notebooks, and weight outputs
+├── calibration/                       # Camera calibration notebook and OpenCV extraction scripts 
+├── inference/                         # Inference pipeline and Mask R-CNN segmentation application
+├── measurement/                       # Dimension calculation and dynamic PPM mathematical scripts
 ├── README.md                          # You are here
 └── requirements.txt                   # Pipeline dependencies
