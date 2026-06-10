@@ -12,7 +12,7 @@ When we ran the automated script over our dataset, here is what actually happene
 
 * **Checkerboard Detection:** We only successfully detected the grid in **10 out of 25** frames (**40%** success rate). The other **15** frames completely failed the OpenCV check.
 * **Target Image Scanning:** We scanned **60** training images for the SadaPay card.
-* **Reference Detection Rate:** We hit a **60/60** (**100%**) success rate using the HSV bounds of `[80, 70, 50]` to `[105, 255, 255]`. 
+* **Reference Detection Rate:** We hit a **64/64** (**100%**) success rate using the HSV bounds of `[80, 70, 50]` to `[105, 255, 255]`. 
 
 ## 3. The Math: Intrinsic Calibration Parameters
 Using the **10** successful calibration frames, the pipeline extracted the camera's intrinsic parameters. We use these to mathematically "flatten" the curved image plane via `cv2.undistort`.
@@ -37,7 +37,7 @@ $$
 To convert our AI's pixel masks into millimeters, we calculated the Pixels-Per-Millimeter (PPM).
 
 * **Global Average PPM:** **10.157126**
-* **The Reality (Dynamic Variance):** During the scan of the **60** images, the actual PPM fluctuated massively—dropping as low as **4.2056** and spiking up to **17.1028**. 
+* **The Reality (Dynamic Variance):** During the scan of the **64** images, the actual PPM fluctuated massively—dropping as low as **4.2056** and spiking up to **17.1028**. 
 * **Conclusion:** This proves we absolutely cannot rely on a single static Global PPM. If the camera moves closer or further away, the pixel density changes. Our inference engine *must* recalculate the PPM dynamically for every single frame using the SadaPay card, otherwise, our measurements will be entirely wrong.
 
 ## 5. Error Analysis (What went wrong and why)
