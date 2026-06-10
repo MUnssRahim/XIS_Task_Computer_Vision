@@ -11,7 +11,7 @@ Here is the rundown of how we set up the calibration pipeline to map the camera'
 When we ran the automated script over our dataset, here is what actually happened:
 
 * **Checkerboard Detection:** We only successfully detected the grid in **10 out of 25** frames (**40%** success rate). The other **15** frames completely failed the OpenCV check.
-* **Target Image Scanning:** We scanned **60** training images for the SadaPay card.
+* **Target Image Scanning:** We scanned **64** training images for the SadaPay card.
 * **Reference Detection Rate:** We hit a **64/64** (**100%**) success rate using the HSV bounds of `[80, 70, 50]` to `[105, 255, 255]`. 
 
 ## 3. The Math: Intrinsic Calibration Parameters
