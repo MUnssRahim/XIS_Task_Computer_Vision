@@ -64,5 +64,4 @@ Because we had **no tripod stand available**, all **25** calibration images and 
 * **Distorted Angles:** Trying to manually capture "different angles" to map the lens curvature meant the camera was physically tilted at highly irregular pitch and yaw degrees. This resulted in severely foreshortened, distorted images of the grid that OpenCV simply couldn't read.
 
 **Final Verdict:** The pipeline was a success mathematically—we successfully extracted the intrinsic matrix ($K$) and distortion coefficients ($D$), and we proved beyond a doubt that dynamic PPM scaling is necessary. However, the baseline RMS error of **2.47** is a direct reflection of our handheld, unmounted capture environment. For a true production-grade metrology system, a rigid camera mount (like a tripod) and a perfectly flat calibration board are absolute, non-negotiable necessities.
-EOF
-EOF
+
