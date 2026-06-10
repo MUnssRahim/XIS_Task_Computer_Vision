@@ -1,4 +1,4 @@
-cat << 'EOF' > docs/CALIBRATION_REPORT.md
+
 # Camera Calibration & Scale Extraction Report
 
 ## 1. System Setup & Methodology
