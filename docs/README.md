@@ -12,6 +12,9 @@ This repository implements an end-to-end computer vision pipeline for instance s
 Due to file size constraints, the curated image datasets, checkboard images , Final Output **Masked Images**, and trained model weights (`.pth` files) are hosted externally. 
 **👉 [Access the Dataset & Models on Google Drive](https://drive.google.com/drive/folders/13S8qHCFh5ukO5oA7mtoIIR17ovi-gmZA?usp=drive_link)**
 
+### How to Test ?
+Due to the model not being deployed online , you shall open Final_Inference.py , update the local path of the picture & weights downloaded from the link above . 
+The Output will be received when run with correct file paths.
 ---
 
 ## 🏗️ Repository Structure & Documentation
