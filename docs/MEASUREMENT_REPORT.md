@@ -1,4 +1,4 @@
-cat << 'EOF' > docs/MEASUREMENT_REPORT.md
+ 
 # Measurement & Metrology Report
 
 ## 1. System Baseline & Calibration Recap
