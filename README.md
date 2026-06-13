@@ -1,4 +1,4 @@
-# XIS Task: Vision Metrology & Instance Segmentation
+# Calibrated Segmentation & Measurement of an Object ( Box )
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
